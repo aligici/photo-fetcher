@@ -15,47 +15,69 @@
 
   <body>
     <div class="container">
-      <h1 style="margin-bottom: 30px">Photo Fetcher</h1>
-
-      <div class="buttons">
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-        <span class="text">Make photos grayscale </span>
+      <h1>Photo Fetcher</h1>
+      <div class="options">
+        <div class="form-check form-switch ">
+          <input
+            class="form-check-input "
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked"
+            onchange="toggleGrayscale(event)"
+          />
+          <label class="form-check-label" for="flexSwitchCheckChecked"
+            >Make photos grayscale</label
+          >
+        </div>
         <button
           type="button"
-          class="btn btn-secondary bu"
-          style="margin-top: -5px"
+          class="btn fetch-photos-btn"
+          onclick="getImages()"
         >
-          Fetch new photos
+          Fetch New Photos
         </button>
       </div>
-      <div class="photo-box">
-        <img
-          class="photos"
-          src="https://images.pexels.com/photos/14801450/pexels-photo-14801450.jpeg?cs=srgb&dl=pexels-c%C3%A9sar-fonseca-14801450.jpg&fm=jpg&_gl=1*19vzjbm*_ga*MzEzMzE4MjIzLjE3MDU0OTE4NjA.*_ga_8JE65Q40S6*MTcwNTQ5MTg2MC4xLjAuMTcwNTQ5MTg2MC4wLjAuMA.."
-        />
-        <img
-          class="photos"
-          src="https://images.pexels.com/photos/4310835/pexels-photo-4310835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        />
-        <img
-          class="photos"
-          src="https://images.pexels.com/photos/18028809/pexels-photo-18028809/free-photo-of-typical-london.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        />
-        <img
-          class="photos"
-          src="https://images.pexels.com/photos/19748973/pexels-photo-19748973/free-photo-of-modern-simplistic-facade.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        />
-        <button
-          type="button"
-          class="btn btn-secondary bu"
-          style="margin-top: -5px; width: 750px"
-        >
-          Add new photos to fetch
-        </button>
+      <div class="row" id="images">
+        <div class="col-6 text-center p-2 position-relative">
+          <img class="photos" src="https://picsum.photos/id/25/400/400" />
+          <div class="info ps-3 py-2">
+            <h4>Alejandro Escamilla</h4>
+            <p class="mb-0">https://unsplash.com/photos/Iuq0EL4EINY</p>
+          </div>
+        </div>
+        <div class="col-6 text-center p-2 position-relative">
+          <img class="photos" src="https://picsum.photos/id/27/400/400" />
+          <div class="info ps-3 py-2">
+            <h4>Yoni Kaplan-Nadel</h4>
+            <p class="mb-0">https://unsplash.com/photos/iJnZwLBOB1I</p>
+          </div>
+        </div>
+        <div class="col-6 text-center p-2 position-relative">
+          <img class="photos" src="https://picsum.photos/id/65/400/400" />
+          <div class="info ps-3 py-2">
+            <h4>Alexander Shustov</h4>
+            <p class="mb-0">https://unsplash.com/photos/2FrX56QL7P8</p>
+          </div>
+        </div>
+        <div class="col-6 text-center p-2 position-relative">
+          <img class="photos" src="https://picsum.photos/id/29/400/400" />
+          <div class="info ps-3 py-2">
+            <h4>Go Wild</h4>
+            <p class="mb-0 url-text">https://unsplash.com/photos/V0yAek6BgGk</p>
+          </div>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-12 p-2">
+      <button
+        type="button"
+        class="btn fetch-photos-btn w-100" 
+        onclick="getImages(false)"
+      >
+        More Photos
+      </button>
+    </div>
+    </div>
     </div>
     <script src="main.js"></script>
   </body>

@@ -1,102 +1,46 @@
 .photos {
-  width: 363px;
+  width: 359px;
   height: 200px;
 }
 
-.photo-box {
-  display: flex;
-  flex-wrap: wrap;
-  border: 4px solid rgba(255, 255, 255, 0);
-  max-width: 750px;
-  gap: 16px;
-  justify-content: center;
-}
-
 .container {
-  position: relative;
-  left: 270px;
+  max-width: 750px !important;
 }
 
-.header {
-  display: flex;
-}
-
-.flipswitch {
-  position: relative;
-  width: 80px;
-}
-
-.buttons {
+.options {
   display: flex;
   justify-content: space-between;
-  max-width: 750px;
+  align-items: center;
 }
 
-.btn-secondary {
-  color: #fff;
-  background-color: #6b49d6 !important;
-  border-color: #5e40c4 !important;
+.fetch-photos-btn {
+  color: #ffffff !important;
+  background-color: #6c4ad5 !important;
 }
 
-.text {
-  margin-right: 350px;
-  margin-top: 2px;
-  font-weight: 500;
-}
-
-.switch {
-  --secondary-container: #686868;
-  --primary: #fdfdfd;
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  width: 3.7em;
-  height: 1.8em;
-}
-
-.switch input {
-  display: none;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+.info {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #686868;
-  transition: 0.2s;
-  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: calc(100% - 16px);
+  bottom: 8px;
+  text-align: left;
+  color: #ffffff;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 20px;
-  left: 0.2em;
-  bottom: 0.2em;
-  background-color: #fdfdfd;
-  transition: 0.4s;
+.url-text {
+  font-weight: lighter;
 }
 
-input:checked + .slider::before {
-  background-color: var(--primary);
+.form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e") !important;
+  background-color: gray !important;
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position .15s ease-in-out;
 }
 
-input:checked + .slider {
-  background-color: var(--secondary-container);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--secondary-container);
-}
-
-input:checked + .slider:before {
-  transform: translateX(1.9em);
+.form-switch .form-check-input:checked {
+  background-color: #6c4ad5 !important;
 }
