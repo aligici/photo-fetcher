@@ -45,5 +45,4 @@ async function getImages(replace = true) {
         
         photos[i].src = url.href;
       }
-    }
-  
+    }  
